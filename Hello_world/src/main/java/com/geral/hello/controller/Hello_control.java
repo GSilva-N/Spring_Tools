@@ -10,7 +10,7 @@ public class Hello_control {
 	
 	@GetMapping
 	public String hello() {
-		return "Persistência e Atenção aos detalhes";
+		return "Mentalidade de crescimento e Persistência";
 	}
 
 }
