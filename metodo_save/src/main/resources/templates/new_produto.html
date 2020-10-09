@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+	<h1>CADASTRAR PRODUTOS</h1>
+	<style>
+		h1{
+			text-align: center;
+		}
+		body{
+			
+			background-color: rgb(204, 220, 245);
+		}
+		 div {
+			font: normal 16pt Arial;
+            background: rgb(156, 188, 235);
+            color: rgb(0, 0, 0);
+            width: 400px;
+            height: 400px;
+            text-align: center;
+            margin: auto;
+            line-height: 40px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.432);
+        }
+		input[type="text"]{
+            font: normal 16pt Arial;
+            width: 200px;
+            height: 25px;
+        }
+        button{
+            font: normal 16pt Arial;
+            width: 100px;
+            height: 40px;
+			border-radius: 10px;
+            
+        }
+	</style>
+
+</head>
+<body>
+
+	<form action="#" th:action="@{/save}" th:object="${produtoview}"
+		method="post">
+		<div>
+		Nome produto: <br><input type="text" th:field="*{nome}"><br>
+		Marca: <br><input type="text" th:field="*{marca}"><br>
+		Criado em: <br><input type="text" th:field="*{criado_em}"><br>
+		Preço: <br><input type="text" th:field="*{preco}" /><br>
+		<hr>
+
+		<button type="submit">Save</button>
+	</div>
+	</form>
+
+</body>
+</html>
